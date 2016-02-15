@@ -1,0 +1,25 @@
+
+<div class=" wrapper-pic-page">
+  <div ng-class = "fadeCarousel" class="jumbotron main-div text-center {{changeMargin}}">
+    <span ng-click = "menu = !menu;showMenu(menu)"class = "hamburger-border"><span class="glyphicon glyphicon-menu-hamburger"></a></span></span>
+        <h1>Featured Projects</h1>
+        <!-- <img src="../../albums/Hagood Residence/IMG_3199.JPG" alt="" /> -->
+        <img ng-src="../../albums/{{folder}}/{{albumObject[folder][0]}}" alt="" />
+      <ul class = 'featured-projects'>
+        <li ng-repeat = 'folder in albums'><span ui-sref="pics.expanded({album:folder})">{{folder}}</span><img ui-sref="pics.expanded({album:folder})"ng-src=".../../albums/{{folder}}/{{albumObject[folder][0]}}" onerror="hello"alt="desciprtions" /></li>
+      </ul>
+  </div>
+    <div class="jumbotron sub-div-pic">
+      <div ui-view></div>
+    </div>
+</div>
+<div ng-class = "showMenuClass"class="menu-directive">
+  <ol type="I">
+    <li ><a ui-sref="landing">Main</a> </li>
+    <li ng-click = "showContact(true)">Contact</li>
+    <li ng-click= "showMenu(!menu);moveDown()">Album</a> </li>
+  </ol>
+</div>
+<contact-directive ng-controller = 'PicsController'></contact-directive>
+
+<!-- <menu-view ng-controller = "PicsController"></menu-view> -->

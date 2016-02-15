@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Charles Lane</title>
+    <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="./css/styles.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body ng-app = "main">
+    <div ui-view></div>
+    <script src="./bower_components/angular/angular.js" charset="utf-8"></script>
+    <script src="./bower_components/underscore/underscore.js" charset="utf-8"></script>
+    <script src="./bower_components/jquery/dist/jquery.js" charset="utf-8"></script>
+    <script src="./bower_components/angular-route/angular-route.js" charset="utf-8"></script>
+    <script src="./bower_components/angular-ui-router/release/angular-ui-router.js" charset="utf-8"></script>
+    <script src="./bower_components/bootstrap/dist/js/bootstrap.js" charset="utf-8"></script>
+    <script src="./bower_components/angular-resource/angular-resource.js"></script>
+      <!-- my app modules  -->
+    <script src="./main/main.module.js" charset="utf-8"></script>
+    <script src="./main/main.controller.js" charset="utf-8"></script>
+    <script src="./main/directives/navbar.js" charset="utf-8"></script>
+    <script src="./main/directives/bottomNav.js" charset="utf-8"></script>
+    <script src="./main/directives/profile.directive.js" charset="utf-8"></script>
+
+    <!-- photo album dependencies -->
+    <script src="./pics/pics.module.js" charset="utf-8"></script>
+    <script src="./pics/pics.controller.js" charset="utf-8"></script>
+    <script src="./pics/pics.service.js" charset="utf-8"></script>
+    <script src="./pics/directives/menu.directive.js" charset="utf-8"></script>
+
+    <!-- contact info -->
+    <script src="./contact/contact.directive.js" charset="utf-8"></script>
+  </body>
+</html>

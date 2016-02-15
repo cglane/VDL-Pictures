@@ -1,0 +1,15 @@
+
+<ul style = "list-style-type: none" class = "navbar">
+  <li ng-click = "showVar = !showVar;showContact(showVar)"><a id = "contact-link">Contact</a></li>
+  <li>
+    <div class="dropdown">
+    <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">Albums
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a ui-sref= "pics.expanded({album:'one',typePic:'historic'})">Historic</a></li>
+      <li><a ui-sref= "pics.expanded({album:'one',typePic:'residential'})">Residential</a></li>
+      <li><a ui-sref= "pics.expanded({album:'one',typePic:'commercial'})">Commercial</a></li>
+    </ul>
+  </div>
+</li>
+</ul>

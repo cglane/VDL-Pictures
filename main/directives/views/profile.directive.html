@@ -1,0 +1,30 @@
+<div ng-controller = "MainController"class="profile-directive">
+  <div class="blurb-award">
+    <!-- <h1> The firm’s work has appeared in books such as The New Family Home and Lowcountry Plantations Today as well as in publications like South Carolina Home and Gardens, Southern Living, Home Magazine, and Charleston Magazine.<small></small></h1> -->
+    <h1 class = "title-profile">VDL Associates, LLC</h1>
+    <img src="https://scontent-mia1-1.xx.fbcdn.net/hphotos-xfa1/v/t1.0-9/11796280_10207337349981476_6489942374305803148_n.jpg?oh=513fdf24a645d2b2236a82133d04e166&oe=573494B5" alt="" />
+    <h5>Virginia Lane, Architect<small></small></h5>
+</div>
+
+<div class="content-banner">
+  <h1>Read Me <small></small></h1>
+  <span ng-show = "!pVar"ng-click = "pVar = !pVar;showProfileContent(pVar)"class = "glyphicon glyphicon-arrow-down"></span>
+  <span ng-show = "pVar"ng-click = "pVar = !pVar;showProfileContent(pVar)"class = "glyphicon glyphicon-arrow-up"></span>
+  <div class="expanded-profile">
+    <h2> VDL Associates, LLC is a design firm specializing in Residential and Commercial Architecture, including Renovations and Historic Restoration. Established in 1996 in the heart of Historic Charleston, the firm’s projects can be found all over the Coastal Carolina region as well as throughout the Southeast.<small></small></h2>
+    <h3> The firm has also been a recipient of the following prestigious awards:
+      <br>
+  The Historic Charleston Foundation's Whitelaw Founders Award - 96 Broad Street
+  <br>
+  Preservation Society of Charleston's Carolopolis Award -  96 Broad Street
+  <br>
+  Preservation Society of Charleston's Carolopolis Award -  56 Church Street
+<br>
+  SC Chapter of the American Institute of Architects' Merit Award - 96 Broad Street
+<br>
+  SC Chapter of the American Institute of Architects' Merit Award - 46 South Battery
+<br>
+  SC Chapter of the American Institute of Architects' Merit Award - 22 Lamboll Street<small></small></h3>
+  </div>
+</div>
+</div>

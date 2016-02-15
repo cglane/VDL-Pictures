@@ -1,0 +1,3 @@
+<div class="container-fluid expanded-container">
+  <li ng-click = "moveUp()"ui-sref="pics.carousel({album: album,startLocation:$index})"ng-repeat = "pics in albumObject[album]"><img ui-sref="pics.carousel({album: album,startLocation:$index})"ng-src="../../albums/{{album}}/{{pics}}" onerror="this.style.display='none';" /></li>
+</div>

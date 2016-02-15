@@ -1,0 +1,22 @@
+<div ng-class = "fadeCarousel "class="carousel-wrapper">
+  <div ng-init = "getCarouselPics()"class="carousel-wide">
+    <ul style = "transition: .5s"ng-style = 'carouselMargin' id = "carousel-short">
+      <li ng-repeat = 'pic in carouselPics'><img ng-src="../../albums/{{album}}/{{pic}}" alt="" /></li>
+    </ul>
+    <div class="blur-left">
+      <!-- <span ng-click = "menu = !menu;showMenu(menu)"class = "hamburger-border"><span class="glyphicon glyphicon-menu-hamburger"></a></span></span> -->
+      <span ng-click = "moveLeft()"class = "glyphicon glyphicon-menu-left"></span>
+    </div>
+    <div class="blur-right">
+      <span ng-click = "moveRight()"class = "glyphicon glyphicon-menu-right"></span>
+    </div>
+  </div>
+</div>
+<div ng-class = "showMenuClass"class="menu-directive">
+  <ol type="I">
+    <li ><a ui-sref="landing">Main</a> </li>
+    <li ng-click = "showContact()">Contact</li>
+    <li ng-click= "moveDown()">Album</a> </li>
+  </ol>
+</div>
+<contact-directive ng-controller = 'PicsController'></contact-directive>
