@@ -51,8 +51,8 @@
             templateUrl: 'pics/views/expanded.html',
           })
           .state('pics.carousel', {
-            url: '/extended/:album/:startLocation',
-            controller:'PicsController',
+            url: '/carousel/:album/:startLocation',
+            controller:'CarouselController',
             templateUrl: 'pics/views/carousel.html',
           })
     //

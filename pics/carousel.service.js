@@ -2,7 +2,7 @@
   "use strict"
   angular
     .module('main')
-    .factory('PicsService',function($resource,$http,$routeParams){
+    .factory('CarouselService',function($resource,$http){
       var albumRange = {
         StackpoleResidence:[
           8452,
@@ -36,17 +36,17 @@
           })
           return albumObject;
       }
-      // var getCarouselPics = function(albumObject,album,startLocation){
-      //   var firstPic = albumObject[album][startLocation]
-      //   var carouselPics = [];
-      //   carouselPics.push(firstPic);//starting location for carousel
-      //       _.each(albumObject[album],function(el){
-      //           if(el != firstPic){
-      //               carouselPics.push(el);
-      //             }
-      //         });
-      //         return carouselPics;
-      // };
+      var getCarouselPics = function(albumObject,album,startLocation){
+        var firstPic = albumObject[album][startLocation]
+        var carouselPics = [];
+        carouselPics.push(firstPic);//starting location for carousel
+            _.each(albumObject[album],function(el){
+                if(el != firstPic){
+                    carouselPics.push(el);
+                  }
+              });
+              return carouselPics;
+      };
       var checkPics = function(albumObject,name,pic){
             $http({
               method: 'GET',
@@ -64,6 +64,7 @@
         }
     return{
       getAlbums:getAlbums,
+      getCarouselPics:getCarouselPics,
     };
   });
 })();

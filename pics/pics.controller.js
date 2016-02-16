@@ -8,42 +8,30 @@ angular
 
 
   //..
-    $scope.state = $state.current;
-    $scope.params = $stateParams;
+    console.log($state)
+    var typePic = $state.params.typePic;
+    if(typePic === 'historic'){
+      $scope.albums= ['Meeting42','HagoodResidence'];
+
+    }else if(typePic === 'residential'){
+      $scope.albums= ['StackpoleResidence','BaileyIsland'];
+
+    }else if(typePic === 'commercial'){
+      $scope.albums= [];
+
+    }
     //---------------- carousel--------//
-    $scope.albums= ['StackpoleResidence','Meeting42','BaileyIsland','HagoodResidence'];
-    // $('<img src= ../../albums/HagoodResidence/IMG_3304.jpg>').error(function(){
-    //   console.log('error')
-    // });
+    // $scope.albums= ['StackpoleResidence','Meeting42','BaileyIsland','HagoodResidence'];
     $scope.albumObject = PicsService.getAlbums();
     $scope.album = $stateParams.album; //getting fooVal
 
     //changing state
 
 
-      $scope.carouselMargin = {
-        left:'400px'
-      }
-      var left = 400;
-      var myIncement = 600;
-      $scope.moveLeft = function(){
-        left -= myIncement;
-        $scope.carouselMargin = {
-          left: left+'px',
-        }
-      }
-      $scope.moveRight = function(){
-        console.log(left,'left')
-        left += myIncement;
-        $scope.carouselMargin = {
-          left: left+'px',
-        }
-      }
-      $scope.moveUp = function(){
-        $scope.startLocation = $stateParams.startLocation;
-        $scope.carouselPics = PicsService.getCarouselPics($scope.albumObject,$scope.album,$scope.startLocation);
+      $scope.moveUp = function(index){
         console.log('move-up')
         $('.main-div').css('margin-top','-500px');
+        $state.go('pics.carousel',{album: $scope.album,startLocation:index});
       }
       $scope.moveDown = function(){
         $('.main-div').css('margin-top','0px');
@@ -54,10 +42,12 @@ angular
         if(bool){
           $scope.fadeCarousel = 'fade-half';
           $scope.showMenuClass = 'fade-in';
-
+          $('.menu-directive').css('left','535px')
         }else{
           $scope.fadeCarousel = 'fade-whole';
           $scope.showMenuClass = 'fade-out';
+          $('.menu-directive').css('left','-500px')
+
         }
       }
       $scope.showContact = function(bool){
