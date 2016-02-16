@@ -5,19 +5,20 @@
 angular
   .module('main')
   .controller('PicsController',function($interval,$scope,$state,$stateParams,$timeout,PicsService,$http){
-    $scope.albums= ['StackpoleResidence','Meeting42','BaileyIsland','HagoodResidence'];
-    $('<img src= ../../albums/HagoodResidence/IMG_3304.jpg>').error(function(){
-      console.log('error')
-    });
 
-    $scope.albumObject = PicsService.getAlbums();
-    //changing state
-    $scope.album = $stateParams.album; //getting fooVal
-    $scope.startLocation = $stateParams.startLocation;
+
   //..
     $scope.state = $state.current;
     $scope.params = $stateParams;
     //---------------- carousel--------//
+    $scope.albums= ['StackpoleResidence','Meeting42','BaileyIsland','HagoodResidence'];
+    // $('<img src= ../../albums/HagoodResidence/IMG_3304.jpg>').error(function(){
+    //   console.log('error')
+    // });
+    $scope.albumObject = PicsService.getAlbums();
+    //changing state
+    $scope.album = $stateParams.album; //getting fooVal
+    $scope.startLocation = $stateParams.startLocation;
     var myIncement = 600;
     var startLocation = $scope.startLocation;
     $scope.carouselPics = [];
@@ -33,7 +34,11 @@ angular
           // var currWidth = 800 * $scope.carouselPics.length+1;//set width of carousel
           // $('#carousel-short').css('width',currWidth)
         });
-        console.log('getCarouselPics',$scope.carouselPics)
+        console.log('getCarouselPics',$scope.carouselPics);
+        var calcWidth = 6000;
+        console.log(calcWidth,'calcWidth')
+        $('#carousel-short').css('width',calcWidth + 'px')
+
       };
       $scope.carouselMargin = {
         left:'400px'
@@ -53,8 +58,9 @@ angular
         }
       }
       $scope.moveUp = function(){
+
         console.log('move-up')
-        $('.main-div').css('margin-top','-500px')
+        $('.main-div').css('margin-top','-500px');
       }
       $scope.moveDown = function(){
         $('.main-div').css('margin-top','0px');

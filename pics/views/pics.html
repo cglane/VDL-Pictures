@@ -6,7 +6,7 @@
         <!-- <img src="../../albums/Hagood Residence/IMG_3199.JPG" alt="" /> -->
         <img ng-src="../../albums/{{folder}}/{{albumObject[folder][0]}}" alt="" />
       <ul class = 'featured-projects'>
-        <li ng-repeat = 'folder in albums'><span ui-sref="pics.expanded({album:folder})">{{folder}}</span><img ui-sref="pics.expanded({album:folder})"ng-src=".../../albums/{{folder}}/{{albumObject[folder][0]}}" onerror="hello"alt="desciprtions" /></li>
+        <li ng-repeat = 'folder in albums'><span ui-sref="pics.expanded({album:folder})">{{folder}}</span><img ui-sref="pics.expanded({album:folder})"ng-src=".../../albums/{{folder}}/{{albumObject[folder][0]}}" alt="desciprtions" /></li>
       </ul>
   </div>
     <div class="jumbotron sub-div-pic">

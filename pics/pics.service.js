@@ -6,19 +6,19 @@
       var albumRange = {
         StackpoleResidence:[
           8452,
-          8776
+          8466
         ],
         Meeting42:[
           6725,
-          6946
+          6741
         ],
         BaileyIsland:[
           4937,
-          5180
+          4951
         ],
         HagoodResidence:[
           3199,
-          3481
+          3214
         ]
       }
       var getAlbums = function(){
