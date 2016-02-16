@@ -1,7 +1,7 @@
 <div ng-class = "fadeCarousel "class="carousel-wrapper">
   <div ng-init = "getCarouselPics()"class="carousel-wide">
     <ul style = "transition: .5s"ng-style = 'carouselMargin' id = "carousel-short">
-      <li ng-repeat = 'pic in carouselPics'><img ng-src="../../albums/{{album}}/{{pic}}" alt="" /></li>
+      <li ng-repeat = 'pic in carouselPics'><img ng-src="../../albums/{{album}}/{{pic}}" alt="../../albums/{{album}}/{{albumObject[album][0]}}" /></li>
     </ul>
     <div class="blur-left">
       <!-- <span ng-click = "menu = !menu;showMenu(menu)"class = "hamburger-border"><span class="glyphicon glyphicon-menu-hamburger"></a></span></span> -->
