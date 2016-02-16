@@ -34,6 +34,7 @@ angular
         $state.go('pics.carousel',{album: $scope.album,startLocation:index});
       }
       $scope.moveDown = function(){
+        $scope.albums= ['StackpoleResidence','Meeting42','BaileyIsland','HagoodResidence'];
         $('.main-div').css('margin-top','0px');
         $state.go('pics');
 

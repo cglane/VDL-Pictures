@@ -267,7 +267,7 @@ body{
     height: 100px;
     position: absolute;
     left: 10%;
-    top:650px;
+    top:570px;
     z-index: 15;
     text-align: center;
     span{
@@ -309,6 +309,7 @@ body{
   font-size: 2em;
   height: 400px;
   h1{
+    color:green;
     font-size: 1em;
     transform: rotate(90deg);
   }
@@ -333,10 +334,12 @@ body{
   top: 200px;
   font-size: 5em;
   z-index: 8;
+  background-color: rgba(250, 250, 250, .1);
+
 }
 .landing-pics{
   transition: 1s ease-in;
-  background-color: white;
+  background-color: rgba(250, 250, 250, .7);
   width: 100%;
   height: 800px;
   margin: auto;
@@ -361,7 +364,7 @@ body{
   z-index: 5;
   width: 400px;
   position: absolute;
-  top: 50px;
+  top: 10px;
   right:100px;
   li{
     text-decoration: underline;;
@@ -491,7 +494,7 @@ footer{
     width: 440px;
     height: 580px;
     position: absolute;
-    left: 1300px;
+    left: 1130px;
     opacity: .5;
     background: white;
     z-index: 5;
